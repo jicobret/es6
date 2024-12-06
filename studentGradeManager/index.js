@@ -5,8 +5,8 @@ class Student {
         this.grades = grades;
     }
 
-    addGrade(...newGrades) { // spread
-        this.grades = [...this.grades, ...newGrades]; // dodaje wprowadzone oceny do istniejacych juz ocen
+    addGrade(...newGrades) { 
+        this.grades = [...this.grades, ...newGrades]; 
         console.log('pomyslnie dodano oceny');
     }
 
@@ -18,7 +18,7 @@ class Student {
         const sum = this.grades.reduce((a, b) => a + b, 0); // suma elementow tablicy za pomoca reduce
         const average = sum / this.grades.length;
 
-        console.log(`srednia ucznia ${this.name}: ${average.toFixed(2)}`); // zwraca srednia zaokraglana do 2 miejsc po przecinku
+        console.log(`srednia ucznia ${this.name}: ${average.toFixed(2)}`);
     }
 }
 
