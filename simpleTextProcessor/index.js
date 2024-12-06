@@ -1,9 +1,9 @@
 const processText = (text, { uppercase = false, reverse = false, removeSpecialChars = false } = {}) => {
 
-    let pText = [...text]; // spread
+    let pText = [...text]; 
 
     if (removeSpecialChars) {
-        pText = pText.filter(char => /[a-zA-Z0-9\s]/.test(char)); // zwraca tylko elementy tablicy spelniajace warunek 
+        pText = pText.filter(char => /[a-zA-Z0-9\s]/.test(char));
     }
 
     if (reverse) {
@@ -11,10 +11,10 @@ const processText = (text, { uppercase = false, reverse = false, removeSpecialCh
     }
 
     if (uppercase) {
-        pText = pText.map(char => char.toUpperCase()); // map wywoluje dana funkcje w odniesieniu do kazdego elementu tablicy
+        pText = pText.map(char => char.toUpperCase());
     }
 
-    pText = pText.join(''); // tablica -> string
+    pText = pText.join('');
 
     console.log(pText);
 };
