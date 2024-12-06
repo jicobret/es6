@@ -14,7 +14,7 @@ const calculateAverage = (results) => {
 };
 
 const findHighestScore = (results) => {
-    const highestScore = results.reduce((a, { score }) => (score > a ? score : a), -Infinity); // '?' dziala jako skrocony if else, gdzie (warunek ? wartosc gdy true : wartosc gdy false)
+    const highestScore = results.reduce((a, { score }) => (score > a ? score : a), -Infinity);
     const { name } = results.find(({ score }) => score === highestScore);
 
     console.log(`najwyzszy wynik: ${highestScore} ucznia ${name}`);
